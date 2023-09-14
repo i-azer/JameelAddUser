@@ -1,7 +1,7 @@
-using JameelApp.Application;
 using JameelApp.Application.Contracts;
 using JameelApp.Application.Contracts.JameelUserDto;
 using JameelApp.EntityFramework.SQLServer;
+using JameelApp.Hangfire;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +12,7 @@ builder.Services.AddDbContext<JameelDatabaseContext>(
         options => options
         .UseSqlServer(builder.Configuration
         .GetConnectionString("Default")));
-builder.Services.AddTransient<IJameelUserApplicationService,JameelUserApplicationService>();
+builder.Services.AddTransient<IJameelUserOffLoader, JameelUserOffLoader>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,12 +23,10 @@ if (app.Environment.IsDevelopment())
 }
 
 
-app.MapPost("/users/add", async (JameelUserRequestDto jameelUserRequestDto, IJameelUserApplicationService appService) =>
+app.MapPost("/users/add", async (JameelUserRequestDto jameelUserRequestDto, IJameelUserOffLoader appOffloader) =>
 {
-    var newUserToBeAdded = await appService.Add(jameelUserRequestDto)
-    .ConfigureAwait(false);
-
-    return Results.Json(newUserToBeAdded);
+    await appOffloader.InsertIntoDatabase(jameelUserRequestDto);
+    return Results.Ok();
 });
 
 app.Run();
