@@ -1,9 +1,12 @@
 using Hangfire;
-using JameelApp.Application;
-using JameelApp.Application.Contracts;
+using JameelApp.EntityFramework.SQLServer;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddTransient<IJameelUserApplicationService, JameelUserApplicationService>();
+builder.Services.AddDbContext<JameelDatabaseContext>(
+        options => options
+        .UseSqlServer(builder.Configuration
+        .GetConnectionString("Default")));
 builder.Services.AddHangfire(configuration => configuration
     .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
     .UseSimpleAssemblyNameTypeSerializer()
