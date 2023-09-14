@@ -20,8 +20,13 @@ namespace JameelApp.Application
             _guidGenerator = new SequentialGuidValueGenerator();
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<JameelUserRequestDto, JameelUser>();
-                cfg.CreateMap<JameelUser, JameelUserResponseDto>();
+                cfg.CreateMap<JameelUserRequestDto, JameelUser>()
+                 .ForMember(mem => mem.DateOfBirth, op => op
+                .MapFrom(src => src.DateOfBirth.ToDateTime(TimeOnly.MinValue)));
+                cfg.CreateMap<JameelUser, JameelUserResponseDto>()
+                .ForMember(mem => mem.DateOfBirth,op => op
+                .MapFrom(src => DateOnly
+                .FromDateTime(src.DateOfBirth)));
             });
 
             _iMapper = config.CreateMapper();
