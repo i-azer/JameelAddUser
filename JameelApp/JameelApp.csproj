@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\JameelApp.Application\JameelApp.Application.csproj" />
     <ProjectReference Include="..\JameelApp.EntityFramework.SQLServer\JameelApp.EntityFramework.SQLServer.csproj" />
+    <ProjectReference Include="..\JameelApp.Hangfire\JameelApp.Hangfire.csproj" />
   </ItemGroup>
 
 </Project>
