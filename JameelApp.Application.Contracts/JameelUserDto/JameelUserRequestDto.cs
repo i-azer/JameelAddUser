@@ -1,9 +1,12 @@
-﻿// Ignore Spelling: Jameel Dto
+﻿// Ignore Spelling: Jameel Dto App
+
+using System.Text.Json.Serialization;
 
 namespace JameelApp.Application.Contracts.JameelUserDto
 {
     public class JameelUserRequestDto
     {
+        [JsonIgnore]
         public Guid Id { get; set; }
         public required string FirstName { get; set; }
         public string? LastName { get; set; }

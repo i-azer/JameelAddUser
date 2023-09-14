@@ -1,4 +1,6 @@
-﻿namespace JameelApp.Application.Contracts.JameelUserDto
+﻿// Ignore Spelling: Jameel Dto App
+
+namespace JameelApp.Application.Contracts.JameelUserDto
 {
     public class JameelUserResponseDto
     {
