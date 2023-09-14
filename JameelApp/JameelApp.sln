@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JameelApp", "JameelApp.csproj", "{663E0B6A-C050-4F8B-8F3F-1938864954E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JameelApp.Domain", "..\JameelApp.Domain\JameelApp.Domain.csproj", "{6C985684-FE3E-4580-9611-76470D6140C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JameelApp.Domain.Shared", "..\JameelApp.Domain.Shared\JameelApp.Domain.Shared.csproj", "{2F133E66-4760-4231-9C3B-F463A55B7892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JameelApp.Application", "..\JameelApp.Application\JameelApp.Application.csproj", "{30890426-FEA1-49A4-AAFB-1B696EF47A05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JameelApp.Application.Contracts", "..\JameelApp.Application.Contracts\JameelApp.Application.Contracts.csproj", "{40BFAF44-2D9D-4D04-A358-20A52535160F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JameelApp.EntityFramework.SQLServer", "..\JameelApp.EntityFramework.SQLServer\JameelApp.EntityFramework.SQLServer.csproj", "{37E6CB9A-97C1-4D83-8D87-4F31B86A8D76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{663E0B6A-C050-4F8B-8F3F-1938864954E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{663E0B6A-C050-4F8B-8F3F-1938864954E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{663E0B6A-C050-4F8B-8F3F-1938864954E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{663E0B6A-C050-4F8B-8F3F-1938864954E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C985684-FE3E-4580-9611-76470D6140C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C985684-FE3E-4580-9611-76470D6140C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C985684-FE3E-4580-9611-76470D6140C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C985684-FE3E-4580-9611-76470D6140C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F133E66-4760-4231-9C3B-F463A55B7892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F133E66-4760-4231-9C3B-F463A55B7892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F133E66-4760-4231-9C3B-F463A55B7892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F133E66-4760-4231-9C3B-F463A55B7892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30890426-FEA1-49A4-AAFB-1B696EF47A05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30890426-FEA1-49A4-AAFB-1B696EF47A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30890426-FEA1-49A4-AAFB-1B696EF47A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30890426-FEA1-49A4-AAFB-1B696EF47A05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40BFAF44-2D9D-4D04-A358-20A52535160F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40BFAF44-2D9D-4D04-A358-20A52535160F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40BFAF44-2D9D-4D04-A358-20A52535160F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40BFAF44-2D9D-4D04-A358-20A52535160F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E6CB9A-97C1-4D83-8D87-4F31B86A8D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E6CB9A-97C1-4D83-8D87-4F31B86A8D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E6CB9A-97C1-4D83-8D87-4F31B86A8D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E6CB9A-97C1-4D83-8D87-4F31B86A8D76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8482F329-4310-42CB-9EC3-6CDA63F72769}
+	EndGlobalSection
+EndGlobal
