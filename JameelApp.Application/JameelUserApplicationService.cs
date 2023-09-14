@@ -12,7 +12,7 @@ namespace JameelApp.Application
     public class JameelUserApplicationService : IJameelUserApplicationService
     {
         private readonly JameelDatabaseContext _context;
-        private IMapper _iMapper;
+        private readonly IMapper _iMapper;
         private readonly SequentialGuidValueGenerator _guidGenerator;
         public JameelUserApplicationService(JameelDatabaseContext context)
         {

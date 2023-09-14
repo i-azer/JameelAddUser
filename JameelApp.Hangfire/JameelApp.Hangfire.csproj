@@ -12,7 +12,6 @@
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="*" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\JameelApp.Application.Contracts\JameelApp.Application.Contracts.csproj" />
 	  <ProjectReference Include="..\JameelApp.Application\JameelApp.Application.csproj" />
 	</ItemGroup>
 </Project>
