@@ -6,6 +6,7 @@ namespace JameelApp.Application.Contracts
 {
     public interface IJameelUserHubBroadcaster
     {
-        Task BroadcastingNewUser(JameelUserResponseDto output);
+        Task JameelUserHubBroadcaster(List<JameelUserResponseDto> jameelUsers);
+        Task BroadcastingNewUser(JameelUserRequestDto jameelUser);
     }
 }

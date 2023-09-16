@@ -3,6 +3,8 @@
 using Hangfire;
 using JameelApp.Application.Contracts;
 using JameelApp.Application.Contracts.JameelUserDto;
+using System;
+using System.Threading.Tasks;
 
 namespace JameelApp.Hangfire
 {
@@ -15,10 +17,14 @@ namespace JameelApp.Hangfire
         }
         public async Task InsertIntoDatabase(JameelUserRequestDto input)
         {
-            await Task.Run(() => BackgroundJob
-            .Schedule(() =>
-            _jameelUserApplicationService.Add(input),
-            TimeSpan.FromMinutes(5)));
+            await Task.Run(() =>
+            {
+                BackgroundJob
+                              .Schedule(() =>
+                              _jameelUserApplicationService.Add(input),
+                              TimeSpan.FromMinutes(5));
+
+            });
         }
     }
 }

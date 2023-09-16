@@ -6,6 +6,7 @@ namespace JameelApp.Application.Contracts
 {
     public interface IJameelUserApplicationService
     {
-        Task<JameelUserResponseDto> Add(JameelUserRequestDto input);
+        Task Add(JameelUserRequestDto input);
+        Task<List<JameelUserResponseDto>> GetJameelUsers();
     }
 }

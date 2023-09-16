@@ -28,6 +28,8 @@ namespace JameelApp.EntityFramework.SQLServer
                 options.Property(x => x.DateOfBirth).IsRequired();
                 options.Property(x => x.PhoneNumber).IsRequired().HasMaxLength(JameelAppConstants.DbPhoneNumberStringLength);
                 options.Property(x => x.Address).IsRequired().HasMaxLength(JameelAppConstants.DbAddressStringLength);
+                options.Property(x => x.CreationDate).IsRequired().HasDefaultValue(DateTime.UtcNow);
+
             });
         }
 

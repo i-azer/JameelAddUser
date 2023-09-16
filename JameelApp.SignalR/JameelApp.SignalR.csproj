@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JameelApp.Application.Contracts\JameelApp.Application.Contracts.csproj" />
+    <ProjectReference Include="..\JameelApp.Application\JameelApp.Application.csproj" />
+    <ProjectReference Include="..\JameelApp.EntityFramework.SQLServer\JameelApp.EntityFramework.SQLServer.csproj" />
   </ItemGroup>
 
 </Project>
