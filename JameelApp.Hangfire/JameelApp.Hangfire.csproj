@@ -1,17 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Hangfire.Core" Version="1.8.*" />
 		<PackageReference Include="Hangfire.SqlServer" Version="1.8.*" />
 		<PackageReference Include="Hangfire.AspNetCore" Version="1.8.*" />
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="*" />
+		<PackageReference Include="System.Threading.Channels" Version="7.0.0" />
 	</ItemGroup>
 	<ItemGroup>
+	  <ProjectReference Include="..\JameelApp.Application.Contracts\JameelApp.Application.Contracts.csproj" />
 	  <ProjectReference Include="..\JameelApp.Application\JameelApp.Application.csproj" />
+	  <ProjectReference Include="..\JameelApp.EntityFramework.SQLServer\JameelApp.EntityFramework.SQLServer.csproj" />
 	</ItemGroup>
 </Project>
